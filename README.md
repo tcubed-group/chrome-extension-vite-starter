@@ -30,13 +30,17 @@ A comprehensive boilerplate for building and Chrome extensions with Vite and Sha
 │ ├── assets/ # Images and static assets
 │ ├── components/ # React components
 │ │ └── ui/ # UI components
+│ ├── config/ # Typed MV3 manifest + entrypoint map
+│ │ └── manifest.ts # Single source of truth for build/manifest.json
+│ ├── entrypoints/ # Extension context bootstraps
+│ │ └── popup/ # Popup UI entry (wired from index.html)
 │ ├── lib/ # Utility functions
 │ │ └── utils.ts # Helper utilities
 │ ├── App.tsx # Main App component
-│ ├── App.css # App styles
-│ └── main.tsx # Entry point
-├── public/ # Static assets and manifest.json
-├── vite.config.ts # Vite configuration
+│ └── App.css # App styles
+├── public/ # Static assets (icons, etc.)
+├── index.html # Popup HTML (action.default_popup)
+├── vite.config.ts # Vite configuration (emits manifest.json)
 ├── tsconfig.json # TypeScript configuration
 ├── tailwind.config.js # Tailwind CSS configuration
 ├── postcss.config.js # PostCSS configuration

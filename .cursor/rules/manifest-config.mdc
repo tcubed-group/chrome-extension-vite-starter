@@ -1,0 +1,13 @@
+# Extension Manifest Config
+
+## Pattern
+
+- Single source of truth: `src/config/manifest.ts` (typed MV3 + entrypoint map)
+- Vite plugin `emit-extension-manifest` in `vite.config.ts` writes `build/manifest.json` via `emitFile` — do not copy from `public/`
+- Popup bootstrap lives at `src/entrypoints/popup/main.tsx`; keep `action.default_popup` aligned with the emitted HTML (`index.html`)
+- `entrypoints.content` / `entrypoints.background` are reserved seams — wire them in the same module when added
+
+## Do not
+
+- Reintroduce a root or `public/manifest.json` as a second source of truth
+- Point `vite-plugin-static-copy` at a missing public manifest
