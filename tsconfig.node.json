@@ -5,9 +5,11 @@
     "skipLibCheck": true,
     "module": "ESNext",
     "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
     "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
     "strict": true,
     "noEmit": true
   },
-  "include": ["vite.config.ts", "src/config/manifest.ts"]
+  "include": ["vite.config.ts", "src/config/manifest.ts", "package.json"]
 }
